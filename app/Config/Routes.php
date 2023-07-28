@@ -5,6 +5,7 @@ namespace Config;
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
+
 /*
  * --------------------------------------------------------------------
  * Router Setup
@@ -31,7 +32,24 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 $routes->get('/', 'Home::index');
-
+$routes->get('/coba/index', 'Coba::index');
+$routes->get('/coba/about', 'Coba::about');
+//routes baru untuk menngani metdod yang lain 
+$routes->get('/coba/(:any)/(:num)', 'Coba::about/$1/$2');
+$routes->get('/user', 'Admin\user::index');
+// nama dari routes ini adalah placeholder
+// (:num) untuk angka 
+// (:alpha) untuk huruf
+// (:alphanum) untuk huruf dan angka 
+// (:any) untuk apapun
+// (:segment) untuk apapun kecuali slash(/)
+// $routes->add('/coba', 'Coba::about');
+// $routes->add('/coba', function(){
+//   echo "Hello Tarisa ini routes memakai closours";
+// });
+// $routes->get('/', 'Coba::about');
+// routes mengarah ke controller home dengan method index 
+// routes punya sagmen yang
 /*
  * --------------------------------------------------------------------
  * Additional Routing

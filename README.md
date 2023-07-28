@@ -1,4 +1,5 @@
 # CodeIgniter 4 Application Starter
+1. Hari ini sudah belajar mengenai controller dan routes dari CI4 
 
 ## What is CodeIgniter?
 
