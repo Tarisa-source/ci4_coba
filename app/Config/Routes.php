@@ -32,11 +32,14 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 $routes->get('/', 'Home::index');
-$routes->get('/coba/index', 'Coba::index');
-$routes->get('/coba/about', 'Coba::about');
+$routes->get('/pages', 'Pages::index');
+$routes->get('/pages/about', 'Pages::about');
+
+// $routes->get('/coba/index', 'Coba::index');
+// $routes->get('/coba/about', 'Coba::about');
 //routes baru untuk menngani metdod yang lain 
-$routes->get('/coba/(:any)/(:num)', 'Coba::about/$1/$2');
-$routes->get('/user', 'Admin\user::index');
+// $routes->get('/coba/(:any)/(:num)', 'Coba::about/$1/$2');
+// $routes->get('/user', 'Admin\user::index');
 // nama dari routes ini adalah placeholder
 // (:num) untuk angka 
 // (:alpha) untuk huruf
